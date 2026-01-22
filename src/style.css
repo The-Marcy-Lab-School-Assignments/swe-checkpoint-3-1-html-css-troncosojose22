@@ -17,3 +17,131 @@ img {
 }
 
 /* Add your styles below */
+
+body {
+  background-color: black;
+  font-family: Arial, sans-serif;
+  color: #f5f5f5;
+}
+
+/* Header */
+
+header {
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid 1px #f5f5f5;
+}
+
+p > img {
+  max-width: 100px;
+  aspect-ratio: 2;
+}
+
+nav {
+  display: flex;
+  gap: 15px;
+}
+
+nav > a {
+  text-decoration: none;
+  color: white;
+}
+
+nav > a:hover {
+  text-decoration: underline;
+}
+
+/* Main */
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+main > section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+main > section > figure {
+  max-width: 300px;
+  padding-top: 40px;
+}
+
+main > section > figure > img {
+  aspect-ratio: 1;
+  border-radius: 400px;
+  object-fit: cover;
+}
+
+h2 {
+  color: white;
+}
+
+.bio {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0px 100px;
+}
+
+.bio-row {
+  display: flex;
+  gap: 10px;
+}
+
+.bold {
+  font-weight: bold;
+  color: white;
+}
+
+.bio > p {
+  max-width: 500px;
+  line-height: 1.5;
+}
+
+/* Image Section */
+
+.image-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.image-grid > li> figure {
+  padding: 0px 40px;
+}
+
+.image-grid > li> figure > img {
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+/* media queries */
+
+@media (min-width: 768px) {
+  .image-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  main > section {
+    flex-direction: row;
+  }
+
+  .bio {
+    padding: 0px;
+  }
+}
+
+@media (min-width: 992px) {
+  .image-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
